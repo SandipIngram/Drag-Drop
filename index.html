@@ -10,32 +10,46 @@
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
     <script src="script.js"></script>
-	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
 <div class="left">
-    <div class="element-wrapper">
-        <div class="element-section">
-            <p>Section</p>
+    <div class="element">
+        <div class="element-wrapper">
+            <div class="element-section">
+                <p>Section</p>
+            </div>
+            <a class="add-element" onclick="add_section()">+</a>
+            <div class="clear"></div>
         </div>
-        <a class="add-element" onclick="add_section()">+</a>
-        <div class="clear"></div>
+        <div class="element-wrapper">
+            <div class="element-section">
+                <p>Sub Section</p>
+            </div>
+            <a class="add-element" onclick="add_sub_section()">+</a>
+            <div class="clear"></div>
+        </div>
+        <div class="element-wrapper">
+            <div class="element-section">
+                <p>Button</p>
+            </div>
+            <a class="add-element" onclick="" data-type="button">+</a>
+            <div class="clear"></div>
+        </div>
     </div>
-    <div class="element-wrapper">
-        <div class="element-section">
-            <p>Sub Section</p>
-        </div>
-		
-		
-		
-		
-		
-		
-		
-		
-        <a class="add-element" onclick="add_sub_section()">+</a>
-        <div class="clear"></div>
+    <div class="properties">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody id="element-properties">
+            </tbody>
+        </table>
     </div>
 </div>
 <div class="right clearfix" id="right">
@@ -52,6 +66,8 @@
         }
         select_element_id = event.target.id;
         $("#"+select_element_id).css("border-color","red");
+        $("#element-properties").html("");
+        $("#element-properties").append("<tr><td>Id</td><td>"+select_element_id+"</td></tr>");
         console.log(select_element_id);
 
     });
