@@ -1,3 +1,10 @@
+$(document).ready(function(){
+	$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+	
+});
+
 var section_id = 1;
 var section_selection_id = "";
 var sub_section_id = 1;

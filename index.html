@@ -5,13 +5,10 @@
     <title>Title</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link href="style.css" type="text/css" rel="stylesheet" />
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link href="style.css" type="text/css" rel="stylesheet" />
+    
 </head>
 <body>
 <div class="container">
@@ -21,21 +18,21 @@
             <div class="element-section">
                 <p>Section</p>
             </div>
-            <a class="add-element" onclick="add_section()">+</a>
+            <a class="add-element" onclick="add_section()" data-toggle="tooltip" data-placement="bottom" title="Add Section">+</a>
             <div class="clear"></div>
         </div>
         <div class="element-wrapper">
             <div class="element-section">
                 <p>Sub Section</p>
             </div>
-            <a class="add-element" onclick="add_sub_section()">+</a>
+            <a class="add-element" onclick="add_sub_section()" data-toggle="tooltip" data-placement="bottom" title="Add Sub Section">+</a>
             <div class="clear"></div>
         </div>
         <div class="element-wrapper">
             <div class="element-section">
                 <p>Button</p>
             </div>
-            <a class="add-element" onclick="" data-type="button">+</a>
+            <a class="add-element" onclick="" data-type="button" data-toggle="tooltip" data-placement="bottom" title="Add Button">+</a>
             <div class="clear"></div>
         </div>
     </div>
